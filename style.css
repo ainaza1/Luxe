@@ -1,0 +1,255 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8ecec; /* Молочно-розовый фон */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+/* Общие стили */
+.site-header{
+    background-color: #f8ecec;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0d0d0;
+}
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-nav {
+    background-color: #f2d7d5; /* Светло-розовый фон навигации */
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.nav-link:hover{
+  color: #d8a7a7;
+}
+
+.main-content {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+.page-title{
+    text-align: center;
+    color:#333;
+}
+/* Стили для главной страницы */
+.hero-section{
+ text-align: center;
+  padding: 20px;
+}
+
+.hero-title{
+  color:#333;
+  margin-bottom: 20px;
+}
+.hero-text{
+   font-size: 1.2em;
+   color:#555;
+}
+.hero-image{
+  max-width: 80%;
+  height: auto;
+   margin: 20px auto;
+   display: block;
+   border-radius: 8px;
+}
+
+/* Стили для страницы каталога */
+
+.product-grid{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 20px;
+}
+
+/* product-item (карточка товара) */
+.product-item {
+  border: 1px solid #eee;
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+  display: flex;       /* Добавляем flexbox */
+  flex-direction: column; /* Располагаем элементы вертикально */
+  align-items: center;  /* Центрируем элементы по горизонтали */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  height: 450px;     /* Фиксированная высота для карточки товара */
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+}
+
+/* product-image (изображение) */
+.product-image {
+  max-width: 100%;
+  height: 200px;     /* Фиксированная высота для изображения */
+  object-fit: cover;   /* Обрезаем изображение, чтобы заполнить контейнер */
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* product-title (заголовок) */
+.product-title {
+  color: #333;
+  margin-bottom: 10px;
+  min-height: 40px;    /* Минимальная высота для заголовка */
+}
+
+/* product-description (описание) */
+.product-description {
+  color: #555;
+  margin-bottom: 10px;
+  min-height: 80px;    /* Минимальная высота для описания */
+  flex-grow: 1;       /* Описание занимает все доступное пространство */
+}
+
+/* product-price (цена) */
+.product-price {
+  color: #d8a7a7;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* product-button (кнопка) */
+.product-button {
+  background-color: #d8a7a7;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: auto;   /* Кнопка всегда внизу карточки */
+}
+
+.product-button:hover {
+  background-color: #c48f8f;
+}
+
+
+
+Стили для страницы "О нас" 
+
+.about-team-image {
+    max-width: 50%; /* Уменьшите размер фотографии (если она большая) */
+    height: auto;
+    display: block; /* Чтобы можно было центрировать */
+    margin: 20px auto; /* Центрирование по горизонтали и отступ сверху/снизу */
+    border-radius: 8px; /* Скругленные углы (по желанию) */
+}
+
+/* Контейнер для галереи ранних сумок */
+.early-bags-gallery {
+    display: flex; /* Выстраиваем элементы в строку */
+    justify-content: space-around; /* Распределяем равномерно по ширине */
+    align-items: center; /* Выравниваем по вертикали (если нужно) */
+    margin-top: 20px; /* Отступ от текста */
+}
+
+/* Элемент (картинка + описание) */
+.bag-item {
+    width: 30%; /* Каждая картинка занимает примерно треть ширины */
+    text-align: center; /* Центрируем картинку и текст */
+}
+
+/* Стиль для картинок ранних сумок */
+.early-bag-image {
+    max-width: 100%; /* Картинка не больше контейнера (30% от родителя) */
+    height: auto;
+    border-radius: 5px; /* Скругленные углы (по желанию) */
+    margin-bottom: 10px; /* Отступ до текста */
+}
+
+/* Стиль для описания под картинкой */
+.bag-caption {
+    font-size: 0.9em;
+    color: #777; /* Цвет текста (можно изменить) */
+}
+
+
+ 
+/* Стили для страниц доставка и контакты*/
+.delivery-info, .contact-info{
+      background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+.contact-info ul{
+     list-style: none;
+     padding: 0;
+}
+.contact-info a{
+    color:#d8a7a7;
+    text-decoration: none;
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input, .contact-form textarea{
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.contact-form button{
+    background-color: #d8a7a7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.contact-form button:hover{
+   background-color: #c48f8f;
+}
+
+/* Стили для подвала */
+.site-footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f0d0d0; /* Светлый розовый фон подвала */
+    margin-top: 30px;
+}
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .nav-link {
+         margin-bottom: 5px;
+    }
+}
